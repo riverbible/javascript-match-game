@@ -5,7 +5,7 @@ const bestText = document.querySelector('.best')
 const message = document.querySelector('.message')
 const btnRestart = document.querySelector('.restart')
 
-const emojis = ['🍎', '🍌', '🍇', '🍓', '🍒', '🥝', '🍑', '🍍'];
+const emojis = ['♠️', '♥️', '♦️', '♣️', '🃏', '🎴', '🎲', '👑'];
 
 const makeCards = () => [...emojis, ...emojis]
 
@@ -166,9 +166,9 @@ const startGame = () => {
   timeText.textContent = 0;
   message.textContent = '카드를 눌러 시작하세요';
 
-  render(shuffle(makeCards()))
-  showBest()
+  render(shuffle(makeCards()));
+  showBest();
 }
 
 btnRestart.addEventListener('click', startGame)
-startGame;
+startGame();
